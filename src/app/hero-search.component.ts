@@ -13,7 +13,7 @@ import { HeroSearchService } from './hero-search.service';
 @Component({
   selector: 'my-hero-search',
   templateUrl: './hero-search.component.html',
-  styleUrls: ['./hero-search.component.css'],
+  styleUrls: ['./hero-search.component.scss'],
   providers: [HeroSearchService]
 })
 export class HeroSearchComponent implements OnInit {
@@ -23,7 +23,7 @@ export class HeroSearchComponent implements OnInit {
   constructor(
     private heroSearchService: HeroSearchService,
     private router: Router
-  ) {}
+  ) { }
 
   search(term: string): void {
     // Push a search term into the observable stream.
@@ -38,9 +38,9 @@ export class HeroSearchComponent implements OnInit {
         term =>
           term // switch to new observable each time
             ? // return the http search observable
-              this.heroSearchService.search(term)
+            this.heroSearchService.search(term)
             : // or the observable of empty heroes if no search term
-              of<Hero[]>([])
+            of<Hero[]>([])
       ),
       catchError(error => {
         // TODO: real error handling

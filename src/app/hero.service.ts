@@ -9,7 +9,7 @@ import { Hero } from './hero';
 export class HeroService {
   private heroesUrl = 'app/heroes'; // URL to web api
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getHeroes() {
     return this.http
