@@ -1,16 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+$dark: #11052c;
+$purple: #3d087b;
+$pink: #f43b86;
+$yellow: #ffe459;
 
 h2 {
-  color: #444;
+  color: $dark;
   font-weight: lighter;
 }
 body {
   margin: 2em;
+  background-color: #FFE9D6;
 }
 body,
 input[text],
 button {
-  color: #888;
+  color: $purple;
   font-family: Cambria, Georgia;
 }
 button {
@@ -19,4 +24,5 @@ button {
 }
 * {
   font-family: Arial;
+  color: $purple;
 }

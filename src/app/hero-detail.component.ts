@@ -17,7 +17,7 @@ export class HeroDetailComponent implements OnInit {
   constructor(
     private heroService: HeroService,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.params.forEach((params: Params) => {
